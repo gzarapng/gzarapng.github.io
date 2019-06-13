@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <title>Portal Oracle</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Gabriel Augusto Franco Zara" />
+    <meta name="description" content="Portal OracleSusDev" />
+    <meta
+      name="keywords"
+      content="projeto, final, oracle, desenvolvimento sustentável, DWE"
+    />
+    <meta name="generator" content="VS Code" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="containerlogo">
+        <a href="index.html"><img src="img/logosite.png"/></a>
+      </div>
+      <div class="topnav">
+        <a class="topnavlinks1" href="oracle1.html">Oracle Server</a>
+        <a class="topnavlinks1" href="oracle2.html">História</a>
+        <a class="topnavlinks1" href="oracle3.html">Como Funciona</a>
+        <a class="topnavlinks1" href="devsus.html">Sustentabilidade</a>
+        <a class="topnavlinks1" href="devsus1.html">Origem</a>
+        <a class="topnavlinks1" href="devsus2.html">Planos de Ação</a>
+        <div class="topnavdrop">
+          <button class="buttondrop">Galerias</button>
+          <div class="dropcontent">
+            <a href="galeria1.html">Sustentabilidade</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <br />
+
+      <div id="oracle1tab" class="tabcontent">
+        <a href="oracle1.html"><h1>Servidor Oracle</h1></a>
+        <p>O mais potente e tradicional banco de dados do mercado.</p>
+      </div>
+
+      <div id="oracle2tab" class="tabcontent">
+        <a href="oracle2.html"><h1>História da Oracle</h1></a>
+        <p>História de uma empresa que mudou o mundo de diversas formas</p>
+      </div>
+
+      <div id="oracle3tab" class="tabcontent">
+        <a href="oracle3.html"><h1>Como Funciona?</h1></a>
+        <p>
+          Entenda sobre o funcionamento do Banco de Dados mais relevante no
+          mundo
+        </p>
+      </div>
+
+      <div id="sus1tab" class="tabcontent">
+        <a href="devsus.html"><h1>Sustentabilidade</h1></a>
+        <p>Entenda o que é e qual o intuito do Desenvolvimento Sustentável</p>
+      </div>
+      <div id="sus2tab" class="tabcontent">
+        <a href="devsus1.html"><h1>Origem</h1></a>
+        <p>
+          A origem do termo, e o que levou ao surgimento de algo tão em pauta
+          atualmente
+        </p>
+      </div>
+      <div id="sus3tab" class="tabcontent">
+        <a href="devsus2.html"><h1>Planos de Ação</h1></a>
+        <p>
+          Veja os planos de ação como medidas de prevenção e mitigamento de
+          danos atualmente sendo aplicados
+        </p>
+      </div>
+
+      <button
+        class="tablink"
+        onclick="openCity('oracle1tab', this, 'rgb(255, 94, 0)')"
+        id="defaultOpen"
+      >
+        Server
+      </button>
+      <button
+        class="tablink"
+        onclick="openCity('oracle2tab', this, 'orangered')"
+      >
+        História
+      </button>
+      <button class="tablink" onclick="openCity('oracle3tab', this, 'orange')">
+        Como funciona?
+      </button>
+      <button class="tablink" onclick="openCity('sus1tab', this, 'green')">
+        Sustentabilidade
+      </button>
+      <button
+        class="tablink"
+        onclick="openCity('sus2tab', this, 'rgb(103, 168, 6)')"
+      >
+        Origem
+      </button>
+      <button
+        class="tablink"
+        onclick="openCity('sus3tab', this, 'rgb(3, 148, 34) ')"
+      >
+        Planos
+      </button>
+    </main>
+    <footer>
+      <div class="ifcontainer">
+        <a class="ifcontainerlogo" href="http://portal.ifspguarulhos.edu.br/"
+          ><img src="img/logoif.png" width="100%" target="_blank" />
+        </a>
+      </div>
+      <div class="footercontainertext">
+        <p class="footertext">
+          Site desenvolvido como um projeto do Instituto Federal de São Paulo -
+          campûs Guarulhos. O objetivo era implementar um portal incorporando 2
+          temas, sendo um de tecnologia e um de meio ambiente.
+        </p>
+        <p class="footertext">
+          Feito por Gabriel Zara. Desenvolvido com HTML, CSS e JSS na plataforma
+          Visual Studio Code
+        </p>
+      </div>
+      <div class="footercontainerlinks">
+        <a
+          class="footerlinks"
+          href="https://github.com/gzarapng"
+          target="_blank"
+          ><img src="img/githublogo.png" width="40px"
+        /></a>
+
+        <a
+          class="footerlinks"
+          href="https://www.instagram.com/gzara.jpg/"
+          target="_blank"
+          ><img src="img/instalogo.png" width="40px"
+        /></a>
+      </div>
+      <div class="footerimage">
+        <img id="image" width="350px" height="150px" />
+        <script type="text/javascript">
+          var description = [
+            "img/one.png",
+            "img/two.png",
+            "img/three.png",
+            "img/four.png",
+            "img/five.png"
+          ];
+
+          var size = description.length;
+          var x = Math.floor(size * Math.random());
+          document.getElementById("image").src = description[x];
+        </script>
+      </div>
+    </footer>
+    <script>
+      function openCity(cityName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+
+        document.getElementById(cityName).style.display = "block";
+
+        elmnt.style.backgroundColor = color;
+      }
+
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>

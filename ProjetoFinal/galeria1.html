@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <title>Portal Oracle</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Gabriel Augusto Franco Zara" />
+    <meta name="description" content="Portal OracleSusDev" />
+    <meta
+      name="keywords"
+      content="projeto, final, oracle, desenvolvimento sustentável, DWE"
+    />
+    <meta name="generator" content="VS Code" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="containerlogo">
+        <a href="index.html"><img src="img/logosite.png"/></a>
+      </div>
+      <div class="topnav">
+        <a class="topnavlinks1" href="oracle1.html">Oracle Server</a>
+        <a class="topnavlinks1" href="oracle2.html">História</a>
+        <a class="topnavlinks1" href="oracle3.html">Como Funciona</a>
+        <a class="topnavlinks1" href="devsus.html">Sustentabilidade</a>
+        <a class="topnavlinks1" href="devsus1.html">Origem</a>
+        <a class="topnavlinks1" href="devsus2.html">Planos de Ação</a>
+        <div class="topnavdrop">
+          <button class="buttondrop">Galerias</button>
+          <div class="dropcontent">
+            <a href="galeria1.html">Sustentabilidade</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <content>
+        <div class="contentcontainer">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="img/img1.png" style="width:100%" />
+              <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="img/img2.png" style="width:100%" />
+              <div class="text">Caption Two</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="img/img3.png" style="width:100%" />
+              <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 5</div>
+              <img src="img/img4.png" style="width:100%" />
+              <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 5</div>
+              <img src="img/img5.png" style="width:100%" />
+              <div class="text">Caption Three</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                  showSlides((slideIndex += n));
+                }
+                function currentSlide(n) {
+                  showSlides((slideIndex = n));
+                }
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {
+                    slideIndex = 1;
+                  }
+                  if (n < 1) {
+                    slideIndex = slides.length;
+                  }
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(
+                      " active",
+                      ""
+                    );
+                  }
+                  slides[slideIndex - 1].style.display = "block";
+                  dots[slideIndex - 1].className += " active";
+                }
+              </script>
+            </div>
+            <br />
+          </div>
+        </div>
+      </content>
+    </main>
+    <footer>
+      <div class="ifcontainer">
+        <a class="ifcontainerlogo" href="http://portal.ifspguarulhos.edu.br/"
+          ><img src="img/logoif.png" width="100%" target="_blank" />
+        </a>
+      </div>
+      <div class="footercontainertext">
+        <p class="footertext">
+          Site desenvolvido como um projeto do Instituto Federal de São Paulo -
+          campûs Guarulhos.
+        </p>
+        <p class="footertext">
+          Feito por Gabriel Zara Desenvolvido com HTML, CSS e JSS na plataforma
+          Visual Studio Code
+        </p>
+      </div>
+      <div class="footercontainerlinks">
+        <a
+          class="footerlinks"
+          href="https://github.com/gzarapng"
+          target="_blank"
+          ><img src="img/githublogo.png" width="40px"
+        /></a>
+
+        <a
+          class="footerlinks"
+          href="https://www.instagram.com/gzara.jpg/"
+          target="_blank"
+          ><img src="img/instalogo.png" width="40px"
+        /></a>
+      </div>
+      <div class="footerimage">
+        <img id="image" width="350px" height="150px" />
+        <script type="text/javascript">
+          var description = [
+            "img/one.png",
+            "img/two.png",
+            "img/three.png",
+            "img/four.png",
+            "img/five.png"
+          ];
+
+          var size = description.length;
+          var x = Math.floor(size * Math.random());
+          document.getElementById("image").src = description[x];
+        </script>
+      </div>
+    </footer>
+  </body>
+</html>
